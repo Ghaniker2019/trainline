@@ -145,12 +145,7 @@ class Barre extends React.Component {
                         borderWidth: 1,
                         borderColor: this.state.selectedStartInput
                           ? "#00C3A7"
-                          : "#DCE3E6",
-                        borderBottomColor:
-                          this.state.selectedStartInput ||
-                          this.state.selectedArrivalInput
-                            ? "#00C3A7"
-                            : "#DCE3E6"
+                          : "#DCE3E6"
                       }}
                     >
                       <FontAwesomeIcon
@@ -271,12 +266,7 @@ class Barre extends React.Component {
                         borderWidth: 1,
                         borderColor: this.state.selectedGoInput
                           ? "#00C3A7"
-                          : "#DCE3E6",
-                        borderBottomColor:
-                          this.state.selectedGoInput ||
-                          this.state.selectedReturnInput
-                            ? "#00C3A7"
-                            : "#DCE3E6"
+                          : "#DCE3E6"
                       }}
                     >
                       <FontAwesomeIcon
