@@ -104,14 +104,11 @@ class BarreRight extends React.Component {
               {this.state.cities.map((city, i) => (
                 <li
                   onClick={() => {
-                    {
-                      this.props.data.selectedStartInput &&
-                        this.props.data.updateStartInput(city.unique_name);
-                    }
-                    {
-                      this.props.data.selectedArrivalInput &&
-                        this.props.data.updateArrivalInput(city.unique_name);
-                    }
+                    this.props.data.selectedStartInput &&
+                      this.props.data.updateStartInput(city.unique_name);
+
+                    this.props.data.selectedArrivalInput &&
+                      this.props.data.updateArrivalInput(city.unique_name);
                   }}
                   key={i}
                   onMouseEnter={() => {

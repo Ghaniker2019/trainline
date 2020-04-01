@@ -17,9 +17,13 @@ class Barre extends React.Component {
     go: "",
     return: "",
     person: "",
+
+    selectedPersonInput: false,
     cityIsVisible: true,
     calandIsVisible: false,
     onFocus: false,
+    selectedGoInput: false,
+    selectedReturnInput: false,
     selectedStartInput: false,
     selectedArrivalInput: false
   };
@@ -130,9 +134,6 @@ class Barre extends React.Component {
                       this.goWhere();
                     }}
                     style={{
-                      borderStyle: "solid",
-                      borderColor: "#DCE3E6",
-                      borderWidth: 1,
                       borderRadius: 3,
                       marginBottom: 30
                     }}
@@ -140,9 +141,16 @@ class Barre extends React.Component {
                     <div
                       style={{
                         display: "flex",
-                        borderBottom: "solid",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "#DCE3E6"
+                        border: "solid",
+                        borderWidth: 1,
+                        borderColor: this.state.selectedStartInput
+                          ? "#00C3A7"
+                          : "#DCE3E6",
+                        borderBottomColor:
+                          this.state.selectedStartInput ||
+                          this.state.selectedArrivalInput
+                            ? "#00C3A7"
+                            : "#DCE3E6"
                       }}
                     >
                       <FontAwesomeIcon
@@ -160,7 +168,10 @@ class Barre extends React.Component {
                         onClick={() => {
                           this.setState({
                             selectedStartInput: true,
-                            selectedArrivalInput: false
+                            selectedArrivalInput: false,
+                            selectedReturnInput: false,
+                            selectedGoInput: false,
+                            selectedPersonInput: false
                           });
                         }}
                         style={{
@@ -184,7 +195,13 @@ class Barre extends React.Component {
                     </div>
                     <div
                       style={{
-                        display: "flex"
+                        display: "flex",
+                        border: "solid",
+                        borderWidth: 1,
+                        borderColor: this.state.selectedArrivalInput
+                          ? "#00C3A7"
+                          : "#DCE3E6",
+                        borderTopColor: "transparent"
                       }}
                     >
                       <FontAwesomeIcon
@@ -201,8 +218,11 @@ class Barre extends React.Component {
                       <input
                         onClick={() => {
                           this.setState({
+                            selectedPersonInput: false,
                             selectedStartInput: false,
-                            selectedArrivalInput: true
+                            selectedArrivalInput: true,
+                            selectedReturnInput: false,
+                            selectedGoInput: false
                           });
                         }}
                         style={{
@@ -231,23 +251,32 @@ class Barre extends React.Component {
                     }}
                     style={{
                       backgroundColor: "#FFFFFF",
-                      marginBottom: 30,
-                      border: "solid",
-                      borderColor: "#DCE3E6",
-                      borderWidth: 1,
-                      borderRadius: 3
+                      marginBottom: 30
                     }}
                   >
                     <div
                       onClick={() => {
-                        this.setState({ onFocus: false });
+                        this.setState({
+                          onFocus: false,
+                          selectedPersonInput: false,
+                          selectedGoInput: true,
+                          selectedReturnInput: false,
+                          selectedStartInput: false,
+                          selectedArrivalInput: false
+                        });
                       }}
                       style={{
                         display: "flex",
-                        backgroundColor: "#FFFFFF",
-                        borderBottom: "solid",
-                        borderBottomColor: "#DCE3E6",
-                        borderBottomWidth: 1
+                        border: "solid",
+                        borderWidth: 1,
+                        borderColor: this.state.selectedGoInput
+                          ? "#00C3A7"
+                          : "#DCE3E6",
+                        borderBottomColor:
+                          this.state.selectedGoInput ||
+                          this.state.selectedReturnInput
+                            ? "#00C3A7"
+                            : "#DCE3E6"
                       }}
                     >
                       <FontAwesomeIcon
@@ -288,11 +317,24 @@ class Barre extends React.Component {
                     </div>
                     <div
                       onClick={() => {
-                        this.setState({ onFocus: true });
+                        this.setState({
+                          onFocus: true,
+                          selectedPersonInput: false,
+                          selectedReturnInput: true,
+                          selectedGoInput: false,
+                          selectedStartInput: false,
+                          selectedArrivalInput: false
+                        });
                       }}
                       style={{
                         display: "flex",
-                        backgroundColor: "#FFFFFF"
+                        backgroundColor: "#FFFFFF",
+                        border: "solid",
+                        borderWidth: 1,
+                        borderTopColor: "transparent",
+                        borderColor: this.state.selectedReturnInput
+                          ? "#00C3A7"
+                          : "#DCE3E6"
                       }}
                     >
                       <FontAwesomeIcon
@@ -333,11 +375,22 @@ class Barre extends React.Component {
                     </div>
                   </div>
                   <div
+                    onClick={() => {
+                      this.setState({
+                        selectedPersonInput: true,
+                        selectedGoInput: false,
+                        selectedReturnInput: false,
+                        selectedStartInput: false,
+                        selectedArrivalInput: false
+                      });
+                    }}
                     style={{
                       display: "flex",
                       border: "solid",
                       borderWidth: 1,
-                      borderColor: "#DCE3E6",
+                      borderColor: this.state.selectedPersonInput
+                        ? "#00C3A7"
+                        : "#DCE3E6",
                       borderRadius: 3,
                       backgroundColor: "#FFFFFF"
                     }}
