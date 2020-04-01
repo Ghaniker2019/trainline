@@ -119,6 +119,7 @@ class BarreRight extends React.Component {
                   }}
                   style={{
                     display: "flex",
+                    height: "42px",
                     borderBottomStyle: "solid",
                     borderWidth: 1,
                     borderColor: "#DCE3E6",

@@ -13,7 +13,7 @@ class Date extends React.Component {
   onChange = startDate => {
     this.setState({ startDate: startDate });
   };
-  str;
+
   render() {
     return (
       <DayPickerRangeController
