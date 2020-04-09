@@ -10,7 +10,7 @@ class BarreRight extends React.Component {
     hover: false,
     selected: "",
     cityValueStart: "",
-    cityValueArrival: ""
+    cityValueArrival: "",
   };
   componentDidMount = async () => {
     const response = await axios.get(
@@ -18,18 +18,14 @@ class BarreRight extends React.Component {
     );
     this.setState({
       cities: response.data,
-      isLoading: false
+      isLoading: false,
     });
   };
 
-  toggleHover = () => {
-    this.setState({ hover: true });
-  };
-
-  changeBackgroundColor = i => {
-    this.toggleHover();
+  changeBackgroundColor = (i) => {
     this.setState({
-      selected: i
+      selected: i,
+      hover: true,
     });
   };
 
@@ -39,12 +35,13 @@ class BarreRight extends React.Component {
         style={{
           display: "block",
           backgroundColor: "#FFFFFF",
-          borderRadius: 2,
+          borderRadius: 1,
           mniHeight: 460,
           width: "48.82117%",
           marginTop: 35,
           marginBottom: 140,
-          padding: 32
+          marginRight: "2.35765%",
+          padding: 32,
         }}
       >
         {/* <div
@@ -77,7 +74,7 @@ class BarreRight extends React.Component {
               fontWeight: 400,
               textRendering: "optimizeLegibility",
               color: "#323E42",
-              marginBottom: 15
+              marginBottom: 15,
             }}
           >
             Choisissez une gare de départ
@@ -98,7 +95,7 @@ class BarreRight extends React.Component {
                 borderColor: "#DCE3E6",
                 borderRadius: 5,
                 backgroundColor: "#FFFFFF",
-                paddingInlineStart: 0
+                paddingInlineStart: 0,
               }}
             >
               {this.state.cities.map((city, i) => (
@@ -127,7 +124,7 @@ class BarreRight extends React.Component {
                     backgroundColor:
                       this.state.selected === i && this.state.hover
                         ? "#FCFCFD"
-                        : ""
+                        : "",
                   }}
                 >
                   <FontAwesomeIcon
@@ -138,7 +135,7 @@ class BarreRight extends React.Component {
                       color:
                         this.state.selected === i && this.state.hover
                           ? "#323E42"
-                          : "#808080"
+                          : "#808080",
                     }}
                     icon={faMapMarkerAlt}
                   ></FontAwesomeIcon>
@@ -153,7 +150,7 @@ class BarreRight extends React.Component {
                         color:
                           this.state.selected === i && this.state.hover
                             ? "#323E42"
-                            : "#808080"
+                            : "#808080",
                       }}
                     >
                       {city.unique_name}

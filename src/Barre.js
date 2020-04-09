@@ -6,7 +6,7 @@ import {
   faSignInAlt,
   faSignOutAlt,
   faCalendarAlt,
-  faUser
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import Background from "./images/train.jpg";
 
@@ -24,8 +24,8 @@ class Barre extends React.Component {
     onFocus: false,
     selectedGoInput: false,
     selectedReturnInput: false,
-    selectedStartInput: false,
-    selectedArrivalInput: false
+    selectedStartInput: true,
+    selectedArrivalInput: false,
   };
 
   onSubmit = () => {
@@ -34,29 +34,29 @@ class Barre extends React.Component {
       arrival: "",
       go: "",
       return: "",
-      person: ""
+      person: "",
     });
   };
-  updateStartInput = city => {
+  updateStartInput = (city) => {
     this.setState({
-      start: city
+      start: city,
     });
   };
-  updateArrivalInput = city => {
+  updateArrivalInput = (city) => {
     this.setState({
-      arrival: city
+      arrival: city,
     });
   };
-  handelStart = e => {
+  handelStart = (e) => {
     e.preventDefault();
     this.setState({
-      start: e.target.value
+      start: e.target.value,
     });
   };
-  handelArrival = e => {
+  handelArrival = (e) => {
     e.preventDefault();
     this.setState({
-      arrival: e.target.value
+      arrival: e.target.value,
     });
   };
   handelGo = () => {};
@@ -65,15 +65,16 @@ class Barre extends React.Component {
     this.setState({
       cityIsVisible: true,
       calandIsVisible: false,
-      onFocus: false
+      onFocus: false,
     });
   };
   displayCaland = () => {
     this.setState({
       calandIsVisible: true,
-      cityIsVisible: false
+      cityIsVisible: false,
     });
   };
+  componentDidMount() {}
 
   render() {
     return (
@@ -82,7 +83,7 @@ class Barre extends React.Component {
           backgroundImage: "url(" + Background + ")",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          backgroundRepeat: "no-repeat"
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div
@@ -91,7 +92,7 @@ class Barre extends React.Component {
             justifyContent: "space-around",
             maxWidth: 940,
             margin: "0 auto",
-            minWidth: 0
+            minWidth: 0,
           }}
         >
           <div
@@ -104,7 +105,7 @@ class Barre extends React.Component {
               marginTop: 35,
               marginBottom: 140,
               marginRight: "2.35765%",
-              padding: 32
+              padding: 32,
             }}
           >
             <div>
@@ -115,7 +116,7 @@ class Barre extends React.Component {
                     backgroundColor: "#FFFFFF",
                     borderRadius: 1,
                     mniHeight: 460,
-                    width: "100%"
+                    width: "100%",
                   }}
                 >
                   <h1
@@ -124,7 +125,7 @@ class Barre extends React.Component {
                       fontWeight: "lighter",
                       textRendering: "optimizeLegibility",
                       color: "#323E42",
-                      marginBottom: 15
+                      marginBottom: 15,
                     }}
                   >
                     Quel est votre trajet ?
@@ -135,7 +136,7 @@ class Barre extends React.Component {
                     }}
                     style={{
                       borderRadius: 3,
-                      marginBottom: 30
+                      marginBottom: 30,
                     }}
                   >
                     <div
@@ -145,7 +146,7 @@ class Barre extends React.Component {
                         borderWidth: 1,
                         borderColor: this.state.selectedStartInput
                           ? "#00C3A7"
-                          : "#DCE3E6"
+                          : "#DCE3E6",
                       }}
                     >
                       <FontAwesomeIcon
@@ -154,7 +155,7 @@ class Barre extends React.Component {
                           paddingLeft: 0,
                           paddingTop: 0,
                           marginTop: 15,
-                          marginLeft: 15
+                          marginLeft: 15,
                         }}
                         icon={faSignInAlt}
                         color="grey"
@@ -166,7 +167,7 @@ class Barre extends React.Component {
                             selectedArrivalInput: false,
                             selectedReturnInput: false,
                             selectedGoInput: false,
-                            selectedPersonInput: false
+                            selectedPersonInput: false,
                           });
                         }}
                         style={{
@@ -179,12 +180,14 @@ class Barre extends React.Component {
                           paddingTop: 8,
                           lineHeight: 2,
                           border: "none",
-                          margin: 0
+                          margin: 0,
                         }}
                         onChange={this.handelStart}
                         type="text"
                         placeholder="Saisissez vôtre gare de départ..."
                         name="départ"
+                        autoFocus="true"
+                        value={this.state.start}
                         id="01"
                       ></input>
                     </div>
@@ -196,7 +199,7 @@ class Barre extends React.Component {
                         borderColor: this.state.selectedArrivalInput
                           ? "#00C3A7"
                           : "#DCE3E6",
-                        borderTopColor: "transparent"
+                        borderTopColor: "transparent",
                       }}
                     >
                       <FontAwesomeIcon
@@ -205,7 +208,7 @@ class Barre extends React.Component {
                           paddingLeft: 0,
                           paddingTop: 0,
                           marginTop: 15,
-                          marginLeft: 15
+                          marginLeft: 15,
                         }}
                         icon={faSignOutAlt}
                         color="grey"
@@ -217,7 +220,7 @@ class Barre extends React.Component {
                             selectedStartInput: false,
                             selectedArrivalInput: true,
                             selectedReturnInput: false,
-                            selectedGoInput: false
+                            selectedGoInput: false,
                           });
                         }}
                         style={{
@@ -230,12 +233,13 @@ class Barre extends React.Component {
                           paddingTop: 8,
                           lineHeight: 2,
                           border: "none",
-                          margin: 0
+                          margin: 0,
                         }}
                         onChange={this.handelArrival}
                         type="text"
                         placeholder="Saisissez vôtre gare d'arrivée..."
                         name="arrivée"
+                        value={this.state.arrival}
                         id="02"
                       ></input>
                     </div>
@@ -246,7 +250,7 @@ class Barre extends React.Component {
                     }}
                     style={{
                       backgroundColor: "#FFFFFF",
-                      marginBottom: 30
+                      marginBottom: 30,
                     }}
                   >
                     <div
@@ -257,7 +261,7 @@ class Barre extends React.Component {
                           selectedGoInput: true,
                           selectedReturnInput: false,
                           selectedStartInput: false,
-                          selectedArrivalInput: false
+                          selectedArrivalInput: false,
                         });
                       }}
                       style={{
@@ -266,7 +270,7 @@ class Barre extends React.Component {
                         borderWidth: 1,
                         borderColor: this.state.selectedGoInput
                           ? "#00C3A7"
-                          : "#DCE3E6"
+                          : "#DCE3E6",
                       }}
                     >
                       <FontAwesomeIcon
@@ -275,7 +279,7 @@ class Barre extends React.Component {
                           paddingLeft: 0,
                           paddingTop: 0,
                           marginTop: 15,
-                          marginLeft: 15
+                          marginLeft: 15,
                         }}
                         icon={faCalendarAlt}
                         color="grey"
@@ -292,7 +296,7 @@ class Barre extends React.Component {
                           lineHeight: 2,
                           opacity: 1,
                           border: "none",
-                          margin: 0
+                          margin: 0,
                         }}
                         type="text"
                         placeholder="aller"
@@ -313,7 +317,7 @@ class Barre extends React.Component {
                           selectedReturnInput: true,
                           selectedGoInput: false,
                           selectedStartInput: false,
-                          selectedArrivalInput: false
+                          selectedArrivalInput: false,
                         });
                       }}
                       style={{
@@ -324,7 +328,7 @@ class Barre extends React.Component {
                         borderTopColor: "transparent",
                         borderColor: this.state.selectedReturnInput
                           ? "#00C3A7"
-                          : "#DCE3E6"
+                          : "#DCE3E6",
                       }}
                     >
                       <FontAwesomeIcon
@@ -333,7 +337,7 @@ class Barre extends React.Component {
                           paddingLeft: 0,
                           paddingTop: 0,
                           marginTop: 15,
-                          marginLeft: 15
+                          marginLeft: 15,
                         }}
                         icon={faCalendarAlt}
                         color="grey"
@@ -350,7 +354,7 @@ class Barre extends React.Component {
                           lineHeight: 2,
                           opacity: 1,
                           border: "none",
-                          margin: 0
+                          margin: 0,
                         }}
                         type="text"
                         placeholder="retour"
@@ -371,7 +375,7 @@ class Barre extends React.Component {
                         selectedGoInput: false,
                         selectedReturnInput: false,
                         selectedStartInput: false,
-                        selectedArrivalInput: false
+                        selectedArrivalInput: false,
                       });
                     }}
                     style={{
@@ -382,7 +386,7 @@ class Barre extends React.Component {
                         ? "#00C3A7"
                         : "#DCE3E6",
                       borderRadius: 3,
-                      backgroundColor: "#FFFFFF"
+                      backgroundColor: "#FFFFFF",
                     }}
                   >
                     <FontAwesomeIcon
@@ -391,7 +395,7 @@ class Barre extends React.Component {
                         paddingLeft: 0,
                         paddingTop: 0,
                         marginTop: 15,
-                        marginLeft: 15
+                        marginLeft: 15,
                       }}
                       icon={faUser}
                       color="grey"
@@ -408,7 +412,7 @@ class Barre extends React.Component {
                         lineHeight: 2,
                         opacity: 1,
                         border: "none",
-                        margin: 0
+                        margin: 0,
                       }}
                       type="text"
                       placeholder="1 Adulte(26-59) "
@@ -428,7 +432,7 @@ class Barre extends React.Component {
                 style={{
                   display: "flex",
                   flex: 1,
-                  justifyContent: "space-around"
+                  justifyContent: "space-around",
                 }}
               >
                 <div style={{ justifyContent: "flex-start" }}>
@@ -445,7 +449,7 @@ class Barre extends React.Component {
                     marginLeft: 60,
                     marginTop: 20,
                     paddingLeft: 20,
-                    paddingRight: 20
+                    paddingRight: 20,
                   }}
                 >
                   RECHERCHER
@@ -462,7 +466,7 @@ class Barre extends React.Component {
                 updateStartInput: this.updateStartInput,
                 updateArrivalInput: this.updateArrivalInput,
                 selectedStartInput: this.state.selectedStartInput,
-                selectedArrivalInput: this.state.selectedArrivalInput
+                selectedArrivalInput: this.state.selectedArrivalInput,
               }}
             />
           )}
