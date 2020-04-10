@@ -187,7 +187,11 @@ class Barre extends React.Component {
                         placeholder="Saisissez vôtre gare de départ..."
                         name="départ"
                         autoFocus="true"
-                        value={this.state.start}
+                        value={
+                          this.state.start !== this.state.arrival
+                            ? this.state.start
+                            : null
+                        }
                         id="01"
                       ></input>
                     </div>
@@ -239,7 +243,11 @@ class Barre extends React.Component {
                         type="text"
                         placeholder="Saisissez vôtre gare d'arrivée..."
                         name="arrivée"
-                        value={this.state.arrival}
+                        value={
+                          this.state.start !== this.state.arrival
+                            ? this.state.arrival
+                            : null
+                        }
                         id="02"
                       ></input>
                     </div>
