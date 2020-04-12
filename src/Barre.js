@@ -1,6 +1,7 @@
 import React from "react";
 import BarreRight from "./BarreRight";
 import CalandBarre from "./CalandBarre";
+import Person from "./Person";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSignInAlt,
@@ -17,7 +18,7 @@ class Barre extends React.Component {
     go: "",
     return: "",
     person: "",
-
+    personIsVisible: false,
     selectedPersonInput: false,
     cityIsVisible: true,
     calandIsVisible: false,
@@ -59,22 +60,29 @@ class Barre extends React.Component {
       arrival: e.target.value,
     });
   };
-  handelGo = () => {};
-  handelReturn = () => {};
+
   goWhere = () => {
     this.setState({
       cityIsVisible: true,
       calandIsVisible: false,
       onFocus: false,
+      personIsVisible: false,
     });
   };
   displayCaland = () => {
     this.setState({
       calandIsVisible: true,
       cityIsVisible: false,
+      personIsVisible: false,
     });
   };
-  componentDidMount() {}
+  displayPerson = () => {
+    this.setState({
+      personIsVisible: true,
+      calandIsVisible: false,
+      cityIsVisible: false,
+    });
+  };
 
   render() {
     return (
@@ -384,6 +392,9 @@ class Barre extends React.Component {
                         selectedReturnInput: false,
                         selectedStartInput: false,
                         selectedArrivalInput: false,
+                        personIsVisible: true,
+                        calandIsVisible: false,
+                        cityIsVisible: false,
                       });
                     }}
                     style={{
@@ -478,6 +489,7 @@ class Barre extends React.Component {
               }}
             />
           )}
+          {this.state.personIsVisible && <Person />}
         </div>
       </div>
     );
