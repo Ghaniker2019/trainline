@@ -4,7 +4,7 @@ import "./fonts/SourceSansPro-Regular.ttf";
 
 class CalandBarre extends React.Component {
   state = {
-    time: ""
+    time: "",
   };
   render() {
     return (
@@ -12,26 +12,21 @@ class CalandBarre extends React.Component {
         style={{
           display: "block",
           backgroundColor: "#FFFFFF",
-          borderRadius: 1,
+          borderRadius: 4,
           mniHeight: 460,
           width: "48.82117%",
           marginTop: 35,
           marginBottom: 140,
-          padding: 32
+          padding: 32,
         }}
       >
-        <div
-          style={{
-            display: "flex"
-          }}
-        ></div>
         <div
           style={{
             display: "block",
             backgroundColor: "#FFFFFF",
             borderRadius: 1,
             mniHeight: 460,
-            width: "100%"
+            width: "100%",
           }}
         >
           <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -41,7 +36,7 @@ class CalandBarre extends React.Component {
                 fontWeight: 400,
                 textRendering: "optimizeLegibility",
                 color: "#323E42",
-                marginBottom: 15
+                marginBottom: 15,
               }}
             >
               Choisissez la date du départ
@@ -57,7 +52,7 @@ class CalandBarre extends React.Component {
                   paddingRight: 5,
                   fontSize: "10px",
                   height: "32px",
-                  marginRight: "33px"
+                  marginRight: "33px",
                 }}
               >
                 PAS DE RETOUR
@@ -67,7 +62,7 @@ class CalandBarre extends React.Component {
           <div
             style={{
               padding: 14,
-              marginLeft: "25px"
+              marginLeft: "25px",
             }}
           >
             <div style={{ display: "flex" }}>
@@ -89,7 +84,7 @@ class CalandBarre extends React.Component {
                     borderWidth: 1,
                     borderRadius: "3px",
                     padding: "3px 0",
-                    maxWidth: "320px"
+                    maxWidth: "320px",
                   }}
                 >
                   <time

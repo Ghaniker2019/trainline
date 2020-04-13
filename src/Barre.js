@@ -1,6 +1,7 @@
 import React from "react";
 import BarreRight from "./BarreRight";
 import CalandBarre from "./CalandBarre";
+import BarreRightHome from "./BarreRightHome";
 import Person from "./Person";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -20,12 +21,13 @@ class Barre extends React.Component {
     person: "",
     personIsVisible: false,
     selectedPersonInput: false,
-    cityIsVisible: true,
+    cityIsVisible: false,
     calandIsVisible: false,
+    barreRightHomeIsVisible: true,
     onFocus: false,
     selectedGoInput: false,
     selectedReturnInput: false,
-    selectedStartInput: true,
+    selectedStartInput: false,
     selectedArrivalInput: false,
   };
 
@@ -107,7 +109,7 @@ class Barre extends React.Component {
             style={{
               display: "block",
               backgroundColor: "#FFFFFF",
-              borderRadius: 1,
+              borderRadius: 4,
               mniHeight: 460,
               width: "48.82117%",
               marginTop: 35,
@@ -176,6 +178,7 @@ class Barre extends React.Component {
                             selectedReturnInput: false,
                             selectedGoInput: false,
                             selectedPersonInput: false,
+                            barreRightHomeIsVisible: false,
                           });
                         }}
                         style={{
@@ -194,7 +197,6 @@ class Barre extends React.Component {
                         type="text"
                         placeholder="Saisissez vôtre gare de départ..."
                         name="départ"
-                        autoFocus="true"
                         value={
                           this.state.start !== this.state.arrival
                             ? this.state.start
@@ -233,6 +235,7 @@ class Barre extends React.Component {
                             selectedArrivalInput: true,
                             selectedReturnInput: false,
                             selectedGoInput: false,
+                            barreRightHomeIsVisible: false,
                           });
                         }}
                         style={{
@@ -278,6 +281,7 @@ class Barre extends React.Component {
                           selectedReturnInput: false,
                           selectedStartInput: false,
                           selectedArrivalInput: false,
+                          barreRightHomeIsVisible: false,
                         });
                       }}
                       style={{
@@ -334,6 +338,7 @@ class Barre extends React.Component {
                           selectedGoInput: false,
                           selectedStartInput: false,
                           selectedArrivalInput: false,
+                          barreRightHomeIsVisible: false,
                         });
                       }}
                       style={{
@@ -395,6 +400,7 @@ class Barre extends React.Component {
                         personIsVisible: true,
                         calandIsVisible: false,
                         cityIsVisible: false,
+                        barreRightHomeIsVisible: false,
                       });
                     }}
                     style={{
@@ -489,6 +495,7 @@ class Barre extends React.Component {
               }}
             />
           )}
+          {this.state.barreRightHomeIsVisible && <BarreRightHome />}
           {this.state.personIsVisible && <Person />}
         </div>
       </div>

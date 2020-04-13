@@ -35,7 +35,7 @@ class BarreRight extends React.Component {
         style={{
           display: "block",
           backgroundColor: "#FFFFFF",
-          borderRadius: 1,
+          borderRadius: 4,
           mniHeight: 460,
           width: "48.82117%",
           marginTop: 35,
@@ -72,7 +72,6 @@ class BarreRight extends React.Component {
             style={{
               fontSize: 20,
               fontWeight: 400,
-              textRendering: "optimizeLegibility",
               color: "#323E42",
               marginBottom: 15,
             }}
