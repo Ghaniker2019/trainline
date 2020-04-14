@@ -67,13 +67,13 @@ export default class Person extends Component {
                   1 Adulte (26 - 59)
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="#a">
                     Action
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="#b">
                     Another action
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="#c">
                     Something else here
                   </a>
                 </div>
@@ -109,7 +109,7 @@ export default class Person extends Component {
             >
               AJOUTER UN AUTRE PASSAGERS
             </button>
-            <div>
+            <div style={{ marginTop: "10px", marginRight: "10px" }}>
               <h
                 style={{
                   color: "#323E42",
@@ -132,10 +132,12 @@ export default class Person extends Component {
                 }}
                 icon={faSignInAlt}
                 color="#01C3A7"
-              ></FontAwesomeIcon>{" "}
-              <a style={{ color: "#01C3A7" }}>Se connecter</a>
+              ></FontAwesomeIcon>
+              <a href="#se_connecter" style={{ color: "#01C3A7" }}>
+                Se connecter
+              </a>
             </div>
-            <div style={{ marginTop: "10px" }}>
+            <div style={{ marginTop: "10px", marginRight: "10px" }}>
               <h
                 style={{
                   color: "#323E42",
@@ -149,7 +151,7 @@ export default class Person extends Component {
                 Bénéficiez de réductions sur vos voyages en train tout au long
                 de l'année.
               </p>
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", marginRight: "10px" }}>
                 <FontAwesomeIcon
                   style={{
                     paddingRight: 0,
@@ -161,7 +163,7 @@ export default class Person extends Component {
                   icon={faAddressCard}
                   color="#01C3A7"
                 ></FontAwesomeIcon>
-                <a style={{ color: "#01C3A7" }}>
+                <a href="#acheter_carte_reduc" style={{ color: "#01C3A7" }}>
                   ACHETER UNE CARTE DE RÉDUCTION
                 </a>
               </div>

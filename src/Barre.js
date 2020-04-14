@@ -449,6 +449,17 @@ class Barre extends React.Component {
                       onChange={this.onChange}
                       value={this.state.person}
                     ></input>
+                    <button
+                      style={{
+                        width: "20%",
+                        borderColor: "transparent",
+                        borderRadius: "3px",
+                      }}
+                      type="button"
+                      class="btn btn-outline-info"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               </form>
@@ -458,6 +469,7 @@ class Barre extends React.Component {
                   display: "flex",
                   flex: 1,
                   justifyContent: "space-around",
+                  marginTop: "20px",
                 }}
               >
                 <div style={{ justifyContent: "flex-start" }}>
