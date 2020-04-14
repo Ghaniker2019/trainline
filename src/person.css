@@ -1,3 +1,12 @@
+#BtnRight:focus {
+  outline: 0;
+}
 #navBar {
   color: #ffffff;
+}
+#BtnRight {
+  background-color: white;
+}
+#BtnRight:hover {
+  background-color: #eefffd;
 }

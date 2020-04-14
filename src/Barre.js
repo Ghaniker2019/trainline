@@ -167,7 +167,7 @@ class Barre extends React.Component {
                           marginTop: 15,
                           marginLeft: 15,
                         }}
-                        icon={faSignInAlt}
+                        icon={faSignOutAlt}
                         color="grey"
                       ></FontAwesomeIcon>
                       <input
@@ -224,7 +224,7 @@ class Barre extends React.Component {
                           marginTop: 15,
                           marginLeft: 15,
                         }}
-                        icon={faSignOutAlt}
+                        icon={faSignInAlt}
                         color="grey"
                       ></FontAwesomeIcon>
                       <input

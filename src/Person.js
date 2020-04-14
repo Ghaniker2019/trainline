@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import "./person.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignInAlt, faAddressCard } from "@fortawesome/free-solid-svg-icons";
 
 export default class Person extends Component {
   render() {
@@ -35,26 +38,131 @@ export default class Person extends Component {
             >
               Choisissez vos passagers
             </h1>
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
+            <div style={{ display: "flex" }}>
+              <div
+                style={{
+                  color: "black",
+                  backgroundColor: "#FFFFFF",
+                  width: "46.5%",
+                }}
+                class="dropdown"
               >
-                1 Adulte (26 - 59)
+                <button
+                  style={{
+                    color: "black",
+                    maxHeight: "44px",
+                    backgroundColor: "#FFFFFF",
+                    width: "100%",
+                    borderColor: "#DCE3E6",
+                    borderTopRightRadius: 0,
+                    borderBottomRightRadius: 0,
+                  }}
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  1 Adulte (26 - 59)
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">
+                    Action
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Another action
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Something else here
+                  </a>
+                </div>
+              </div>
+              <button
+                style={{
+                  color: "#28A994",
+                  width: "46.5%",
+                  borderColor: "#DCE3E6",
+                  borderTopLeftRadius: 0,
+                  borderBottomLeftRadius: 0,
+                  borderLeftColor: "transparent",
+                }}
+                type="button"
+                class="btn btn-primary btn-sm"
+                id="BtnRight"
+              >
+                Cartes et abonnements
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">
-                  Action
-                </a>
-                <a class="dropdown-item" href="#">
-                  Another action
-                </a>
-                <a class="dropdown-item" href="#">
-                  Something else here
+            </div>
+            <button
+              style={{
+                color: "#28A994",
+                width: "93%",
+                borderColor: "#DCE3E6",
+                marginTop: "26px",
+                backgroundColor: "#eefffd",
+                marginBottom: "40px",
+              }}
+              type="button"
+              class="btn btn-primary btn-sm"
+              id="BtnRight"
+            >
+              AJOUTER UN AUTRE PASSAGERS
+            </button>
+            <div>
+              <h
+                style={{
+                  color: "#323E42",
+                  fontSize: "19px",
+                  fontWeight: "bold",
+                }}
+              >
+                Retrouver vos passagers sauvegardés ?
+              </h>
+              <p style={{ marginTop: "2px", marginBottom: "0px" }}>
+                Connectez-vous à votre compte pour accéder aux passagers
+                enregistrés lors de vos précédentes recherches.
+              </p>
+              <FontAwesomeIcon
+                style={{
+                  paddingRight: 0,
+                  paddingLeft: 0,
+                  paddingTop: 0,
+                  marginRight: "2px",
+                }}
+                icon={faSignInAlt}
+                color="#01C3A7"
+              ></FontAwesomeIcon>{" "}
+              <a style={{ color: "#01C3A7" }}>Se connecter</a>
+            </div>
+            <div style={{ marginTop: "10px" }}>
+              <h
+                style={{
+                  color: "#323E42",
+                  fontSize: "19px",
+                  fontWeight: "bold",
+                }}
+              >
+                Économisez grâce aux cartes de réduction
+              </h>
+              <p style={{ marginTop: "2px", marginBottom: "0px" }}>
+                Bénéficiez de réductions sur vos voyages en train tout au long
+                de l'année.
+              </p>
+              <div style={{ display: "flex" }}>
+                <FontAwesomeIcon
+                  style={{
+                    paddingRight: 0,
+                    paddingLeft: 0,
+                    paddingTop: 0,
+                    marginTop: "4px",
+                    marginRight: "4px",
+                  }}
+                  icon={faAddressCard}
+                  color="#01C3A7"
+                ></FontAwesomeIcon>
+                <a style={{ color: "#01C3A7" }}>
+                  ACHETER UNE CARTE DE RÉDUCTION
                 </a>
               </div>
             </div>

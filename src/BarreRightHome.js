@@ -61,7 +61,7 @@ export default class BarreRightHome extends Component {
                   width: "80%",
                   height: "100%",
                   marginLeft: "5px",
-                  padding: 14,
+                  padding: 12,
                 }}
                 icon={faBookmark}
                 color="#FFFFFF"
@@ -97,7 +97,7 @@ export default class BarreRightHome extends Component {
                   width: "80%",
                   height: "100%",
                   marginLeft: "5px",
-                  padding: "6px",
+                  padding: 12,
                 }}
                 icon={faRegistered}
                 color="#FFFFFF"
@@ -130,7 +130,7 @@ export default class BarreRightHome extends Component {
                   width: "80%",
                   height: "100%",
                   marginLeft: "5px",
-                  padding: 10,
+                  padding: 12,
                 }}
                 icon={faCreditCard}
                 color="#FFFFFF"
