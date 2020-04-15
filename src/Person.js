@@ -128,7 +128,7 @@ export default class Person extends Component {
                   paddingRight: 0,
                   paddingLeft: 0,
                   paddingTop: 0,
-                  marginRight: "2px",
+                  marginRight: "4px",
                 }}
                 icon={faSignInAlt}
                 color="#01C3A7"
@@ -158,7 +158,7 @@ export default class Person extends Component {
                     paddingLeft: 0,
                     paddingTop: 0,
                     marginTop: "4px",
-                    marginRight: "4px",
+                    marginRight: "5px",
                   }}
                   icon={faAddressCard}
                   color="#01C3A7"
