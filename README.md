@@ -1,4 +1,4 @@
-# Trainline Report Web App
+# **Trainline** Report Web App
 
 ## Table of contents
 
