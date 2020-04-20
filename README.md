@@ -8,17 +8,17 @@
 - Features
 - Status
 
-# Info
+## Info
 
 I created this project to experiment with the **forms**, **requests** and **design** part with **React.js**
 
-# Technologies
+## Technologies
 
 - **Axios** : 0.19.2
 - **React.js** : 16.13.0
 - **Bootstrap** : 4.4.1
 
-# Installation
+## Installation
 
 - Clone the repository
 
@@ -31,10 +31,10 @@ I created this project to experiment with the **forms**, **requests** and **desi
 - Run
   `npm start`
 
-# Features
+## Features
 
 - fill in the form using the component on the right, without writing
 
-# Status
+## Status
 
 _In progress._
