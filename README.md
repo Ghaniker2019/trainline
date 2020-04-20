@@ -34,7 +34,9 @@ I created this project to experiment with the **forms**, **requests** and **desi
 
 ## Features
 
-- fill in the form using the component on the right, without writing
+- Complete the form using the component on the right, without writing
+
+![Uploading myTrainline.png…]()
 
 ## Status
 
