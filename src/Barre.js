@@ -40,6 +40,19 @@ class Barre extends React.Component {
       person: "",
     });
   };
+
+  updateGoInput = (date) => {
+    this.setState({
+      go: date,
+    });
+  };
+
+  updateReturnInput = (date) => {
+    this.setState({
+      return: date,
+    });
+  };
+
   updateStartInput = (city) => {
     this.setState({
       start: city,
@@ -60,6 +73,20 @@ class Barre extends React.Component {
     e.preventDefault();
     this.setState({
       arrival: e.target.value,
+    });
+  };
+
+  handelGo = (e) => {
+    e.preventDefault();
+    this.setState({
+      go: e.target.value,
+    });
+  };
+
+  handelReturn = (e) => {
+    e.preventDefault();
+    this.setState({
+      return: e.target.value,
     });
   };
 
@@ -145,18 +172,18 @@ class Barre extends React.Component {
                       this.goWhere();
                     }}
                     style={{
-                      borderRadius: 3,
                       marginBottom: 30,
                     }}
                   >
                     <div
                       style={{
                         display: "flex",
-                        border: "solid",
-                        borderWidth: 1,
+                        border: "1px solid",
                         borderColor: this.state.selectedStartInput
                           ? "#00C3A7"
                           : "#DCE3E6",
+                        borderTopRightRadius: "5px",
+                        borderTopLeftRadius: "5px",
                       }}
                     >
                       <FontAwesomeIcon
@@ -214,6 +241,8 @@ class Barre extends React.Component {
                           ? "#00C3A7"
                           : "#DCE3E6",
                         borderTopColor: "transparent",
+                        borderBottomRightRadius: "5px",
+                        borderBottomLeftRadius: "5px",
                       }}
                     >
                       <FontAwesomeIcon
@@ -286,11 +315,13 @@ class Barre extends React.Component {
                       }}
                       style={{
                         display: "flex",
-                        border: "solid",
-                        borderWidth: 1,
+                        border: "1px solid",
+                        borderBottomColor: "transparent",
                         borderColor: this.state.selectedGoInput
                           ? "#00C3A7"
                           : "#DCE3E6",
+                        borderTopRightRadius: "5px",
+                        borderTopLeftRadius: "5px",
                       }}
                     >
                       <FontAwesomeIcon
@@ -325,7 +356,7 @@ class Barre extends React.Component {
                         required="true"
                         name="aller"
                         id="03"
-                        onChange={this.onChange}
+                        onChange={this.handelGo}
                         value={this.state.go}
                       ></input>
                     </div>
@@ -346,10 +377,13 @@ class Barre extends React.Component {
                         backgroundColor: "#FFFFFF",
                         border: "solid",
                         borderWidth: 1,
-                        borderTopColor: "transparent",
+
                         borderColor: this.state.selectedReturnInput
                           ? "#00C3A7"
                           : "#DCE3E6",
+                        borderTopColor: "transparent",
+                        borderBottomRightRadius: "5px",
+                        borderBottomLeftRadius: "5px",
                       }}
                     >
                       <FontAwesomeIcon
@@ -384,7 +418,7 @@ class Barre extends React.Component {
                         required="true"
                         name="retour"
                         id="04"
-                        onChange={this.onChange}
+                        onChange={this.handelReturn}
                         value={this.state.return}
                       ></input>
                     </div>
@@ -410,7 +444,7 @@ class Barre extends React.Component {
                       borderColor: this.state.selectedPersonInput
                         ? "#00C3A7"
                         : "#DCE3E6",
-                      borderRadius: 3,
+                      borderRadius: "5px",
                       backgroundColor: "#FFFFFF",
                     }}
                   >
@@ -456,7 +490,7 @@ class Barre extends React.Component {
                         borderRadius: "3px",
                       }}
                       type="button"
-                      class="btn btn-outline-info"
+                      class="btn btn-outline-info green"
                     >
                       +
                     </button>
@@ -495,7 +529,11 @@ class Barre extends React.Component {
             </div>
           </div>
           {this.state.calandIsVisible && (
-            <CalandBarre onFocus={this.state.onFocus} />
+            <CalandBarre
+              onFocus={this.state.onFocus}
+              updateGoInput={this.updateGoInput}
+              updateReturnInput={this.updateReturnInput}
+            />
           )}
           {this.state.cityIsVisible && (
             <BarreRight

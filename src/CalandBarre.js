@@ -67,7 +67,10 @@ class CalandBarre extends React.Component {
           >
             <div style={{ display: "flex" }}>
               <div style={{ justifyContent: "flex-start" }}>
-                <Date />
+                <Date
+                  updateGoInput={this.props.updateGoInput}
+                  updateReturnInput={this.props.updateReturnInput}
+                />
                 <div
                   style={{
                     display: "flex",
