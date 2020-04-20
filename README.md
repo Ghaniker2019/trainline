@@ -26,9 +26,10 @@ I created this project to experiment with the **forms**, **requests** and **desi
 
 - Add dependencies
 
-`npm i`
+  `npm i`
 
 - Run
+
   `npm start`
 
 ## Features
