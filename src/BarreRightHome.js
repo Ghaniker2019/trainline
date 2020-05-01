@@ -49,22 +49,17 @@ export default class BarreRightHome extends Component {
           >
             <div
               style={{
-                display: "flex",
-                width: "30%",
-                height: "10%",
-                border: "solid",
-                borderRadius: "50%",
-                backgroundColor: "#213550",
                 marginRight: "30px",
-                marginLeft: "20px",
               }}
             >
               <FontAwesomeIcon
                 style={{
-                  width: "80%",
-                  height: "100%",
-                  marginLeft: "5px",
-                  padding: 12,
+                  border: "solid transparent",
+                  borderRadius: "50%",
+                  backgroundColor: "#213550",
+                  width: "68px",
+                  height: "68px",
+                  padding: "15px",
                 }}
                 icon={faBookmark}
                 color="#FFFFFF"
@@ -89,22 +84,17 @@ export default class BarreRightHome extends Component {
           >
             <div
               style={{
-                display: "flex",
-                width: "30%",
-                height: "10%",
-                border: "solid",
-                borderRadius: "50%",
-                backgroundColor: "#213550",
                 marginRight: "30px",
-                marginLeft: "20px",
               }}
             >
               <FontAwesomeIcon
                 style={{
-                  width: "80%",
-                  height: "100%",
-                  marginLeft: "5px",
-                  padding: 12,
+                  border: "solid transparent",
+                  borderRadius: "50%",
+                  backgroundColor: "#213550",
+                  width: "68px",
+                  height: "68px",
+                  padding: "15px",
                 }}
                 icon={faRegistered}
                 color="#FFFFFF"
@@ -126,22 +116,17 @@ export default class BarreRightHome extends Component {
           >
             <div
               style={{
-                display: "flex",
-                width: "30%",
-                height: "5%",
-                border: "solid",
-                borderRadius: "50%",
-                backgroundColor: "#213550",
                 marginRight: "30px",
-                marginLeft: "20px",
               }}
             >
               <FontAwesomeIcon
                 style={{
-                  width: "80%",
-                  height: "100%",
-                  marginLeft: "5px",
-                  padding: 12,
+                  border: "solid transparent",
+                  borderRadius: "50%",
+                  backgroundColor: "#213550",
+                  width: "68px",
+                  height: "68px",
+                  padding: "15px",
                 }}
                 icon={faCreditCard}
                 color="#FFFFFF"
