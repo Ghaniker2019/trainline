@@ -49,7 +49,7 @@ export default class BarreRightHome extends Component {
           >
             <div
               style={{
-                marginRight: "30px",
+                margin: "4px 30px 0px 10px",
               }}
             >
               <FontAwesomeIcon
@@ -57,8 +57,8 @@ export default class BarreRightHome extends Component {
                   border: "solid transparent",
                   borderRadius: "50%",
                   backgroundColor: "#213550",
-                  width: "68px",
-                  height: "68px",
+                  width: "62px",
+                  height: "62px",
                   padding: "15px",
                 }}
                 icon={faBookmark}
@@ -84,7 +84,7 @@ export default class BarreRightHome extends Component {
           >
             <div
               style={{
-                marginRight: "30px",
+                margin: "4px 30px 0px 10px",
               }}
             >
               <FontAwesomeIcon
@@ -92,8 +92,8 @@ export default class BarreRightHome extends Component {
                   border: "solid transparent",
                   borderRadius: "50%",
                   backgroundColor: "#213550",
-                  width: "68px",
-                  height: "68px",
+                  width: "62px",
+                  height: "62px",
                   padding: "15px",
                 }}
                 icon={faRegistered}
@@ -116,7 +116,7 @@ export default class BarreRightHome extends Component {
           >
             <div
               style={{
-                marginRight: "30px",
+                margin: "4px 30px 0px 10px",
               }}
             >
               <FontAwesomeIcon
@@ -124,8 +124,8 @@ export default class BarreRightHome extends Component {
                   border: "solid transparent",
                   borderRadius: "50%",
                   backgroundColor: "#213550",
-                  width: "68px",
-                  height: "68px",
+                  width: "62px",
+                  height: "62px",
                   padding: "15px",
                 }}
                 icon={faCreditCard}
