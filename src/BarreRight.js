@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import "./barreRight.css";
 
 class BarreRight extends React.Component {
   state = {
@@ -44,6 +45,12 @@ class BarreRight extends React.Component {
           padding: 32,
         }}
       >
+        <div
+          className={
+            (this.props.data.selectedStartInput && "arrow_start") ||
+            (this.props.data.selectedArrivalInput && "arrow_arrival")
+          }
+        ></div>
         {/* <div
           style={{
             margin: 0,
@@ -67,6 +74,7 @@ class BarreRight extends React.Component {
             }
           }}
         ></div> */}
+
         <div>
           <h1
             style={{

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./person.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignInAlt, faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import "./barreRight.css";
 
 export default class Person extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class Person extends Component {
           marginRight: "2.35765%",
         }}
       >
+        <div className={this.props.selectedPersonInput && "arrow_person"}></div>
         <div
           style={{
             display: "block",

@@ -533,6 +533,8 @@ class Barre extends React.Component {
               onFocus={this.state.onFocus}
               updateGoInput={this.updateGoInput}
               updateReturnInput={this.updateReturnInput}
+              selectedGoInput={this.state.selectedGoInput}
+              selectedReturnInput={this.state.selectedReturnInput}
             />
           )}
           {this.state.cityIsVisible && (
@@ -546,7 +548,9 @@ class Barre extends React.Component {
             />
           )}
           {this.state.barreRightHomeIsVisible && <BarreRightHome />}
-          {this.state.personIsVisible && <Person />}
+          {this.state.personIsVisible && (
+            <Person selectedPersonInput={this.state.selectedPersonInput} />
+          )}
         </div>
       </div>
     );

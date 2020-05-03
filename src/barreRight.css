@@ -1,0 +1,64 @@
+.arrow_start {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  top: 50px;
+  left: -52px;
+
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid white;
+}
+
+.arrow_arrival {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  top: 105px;
+  left: -52px;
+
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid white;
+}
+
+.arrow_go {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  top: 188px;
+  left: -52px;
+
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid white;
+}
+
+.arrow_return {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  top: 235px;
+
+  left: -52px;
+
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid white;
+}
+.arrow_person {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  top: 315px;
+  left: -52px;
+
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid white;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Date from "./Date";
 import "./fonts/SourceSansPro-Regular.ttf";
+import "./barreRight.css";
 
 class CalandBarre extends React.Component {
   state = {
@@ -20,6 +21,12 @@ class CalandBarre extends React.Component {
           padding: 32,
         }}
       >
+        <div
+          className={
+            (this.props.selectedGoInput && "arrow_go") ||
+            (this.props.selectedReturnInput && "arrow_return")
+          }
+        ></div>
         <div
           style={{
             display: "block",
