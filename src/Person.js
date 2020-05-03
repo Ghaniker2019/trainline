@@ -5,6 +5,12 @@ import { faSignInAlt, faAddressCard } from "@fortawesome/free-solid-svg-icons";
 import "./barreRight.css";
 
 export default class Person extends Component {
+  componentDidMount() {
+    console.log(
+      this.props.selectedPersonInput,
+      "<<<< selectedPersonInput    ?"
+    );
+  }
   render() {
     return (
       <div
