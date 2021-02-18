@@ -8,20 +8,19 @@ import {
 import "./person.css";
 import AppStore from "./images//Download_on_the_App_Store.png";
 import PlayStore from "./images/D_play_store.png";
+import Hidden from '@material-ui/core/Hidden';
 
 export default class BarreRightHome extends Component {
   render() {
     return (
-      <div
+      <Hidden smDown>   <div
         style={{
-          display: "block",
           backgroundColor: "#F8FDFC",
           borderRadius: 4,
-          mniHeight: 460,
-          width: "48.82117%",
-          marginTop: 35,
-          marginBottom: 140,
-          marginRight: "2.35765%",
+          maxWidth: 400,
+          marginTop: 60,
+          height: 500,
+
         }}
       >
         <div
@@ -179,7 +178,7 @@ export default class BarreRightHome extends Component {
             ></div>
           </div>
         </div>
-      </div>
+      </div> </Hidden>
     );
   }
 }

@@ -15,14 +15,15 @@ export default class Person extends Component {
     return (
       <div
         style={{
-          display: "block",
+
           backgroundColor: "#FFFFFF",
           borderRadius: 4,
-          mniHeight: 460,
-          width: "48.82117%",
-          marginTop: 35,
-          marginBottom: 140,
-          marginRight: "2.35765%",
+          maxWidth: 400,
+          marginTop: 60,
+          height: 500,
+
+
+
         }}
       >
         <div className={this.props.selectedPersonInput && "arrow_person"}></div>

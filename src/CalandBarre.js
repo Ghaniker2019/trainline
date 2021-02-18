@@ -2,6 +2,8 @@ import React from "react";
 import Date from "./Date";
 import "./fonts/SourceSansPro-Regular.ttf";
 import "./barreRight.css";
+import Hidden from '@material-ui/core/Hidden';
+
 
 class CalandBarre extends React.Component {
   state = {
@@ -9,16 +11,15 @@ class CalandBarre extends React.Component {
   };
   render() {
     return (
-      <div
+      <Hidden smDown>   <div
         style={{
           display: "block",
           backgroundColor: "#FFFFFF",
           borderRadius: 4,
-          mniHeight: 460,
-          width: "48.82117%",
-          marginTop: 35,
-          marginBottom: 140,
+          maxWidth: 400,
           padding: 32,
+          marginTop: 60,
+          height: 500,
         }}
       >
         <div
@@ -32,7 +33,7 @@ class CalandBarre extends React.Component {
             display: "block",
             backgroundColor: "#FFFFFF",
             borderRadius: 1,
-            mniHeight: 460,
+
             width: "100%",
           }}
         >
@@ -166,6 +167,7 @@ class CalandBarre extends React.Component {
           </div>
         </div>
       </div>
+      </Hidden>
     );
   }
 }

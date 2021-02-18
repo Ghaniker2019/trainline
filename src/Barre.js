@@ -11,6 +11,8 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import Background from "./images/train.jpg";
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
 class Barre extends React.Component {
   state = {
@@ -123,37 +125,25 @@ class Barre extends React.Component {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            maxWidth: 940,
-            margin: "0 auto",
-            minWidth: 0,
-          }}
-        >
-          <div
-            style={{
-              display: "block",
-              backgroundColor: "#FFFFFF",
-              borderRadius: 4,
-              mniHeight: 460,
-              width: "48.82117%",
-              marginTop: 35,
-              marginBottom: 140,
-              marginRight: "2.35765%",
-              padding: 32,
-            }}
-          >
-            <div>
+        <Grid container spacing={6} direction="row" justify="center">
+          <Grid item xs={12} md={4} >
+            <div
+              style={{
+                backgroundColor: "#FFFFFF",
+                borderRadius: 4,
+                maxWidth: 400,
+                padding: 32,
+                margin: "60px 20px 20px 20px",
+
+                height: 500,
+              }}
+            >
+
               <form onSubmit={this.onSubmit}>
                 <div
                   style={{
-                    display: "block",
                     backgroundColor: "#FFFFFF",
                     borderRadius: 1,
-                    mniHeight: 460,
-                    width: "100%",
                   }}
                 >
                   <h1
@@ -526,32 +516,36 @@ class Barre extends React.Component {
                   RECHERCHER
                 </button>
               </div>
+
             </div>
-          </div>
-          {this.state.calandIsVisible && (
-            <CalandBarre
-              onFocus={this.state.onFocus}
-              updateGoInput={this.updateGoInput}
-              updateReturnInput={this.updateReturnInput}
-              selectedGoInput={this.state.selectedGoInput}
-              selectedReturnInput={this.state.selectedReturnInput}
-            />
-          )}
-          {this.state.cityIsVisible && (
-            <BarreRight
-              data={{
-                updateStartInput: this.updateStartInput,
-                updateArrivalInput: this.updateArrivalInput,
-                selectedStartInput: this.state.selectedStartInput,
-                selectedArrivalInput: this.state.selectedArrivalInput,
-              }}
-            />
-          )}
-          {this.state.barreRightHomeIsVisible && <BarreRightHome />}
-          {this.state.personIsVisible && (
-            <Person selectedPersonInput={this.state.selectedPersonInput} />
-          )}
-        </div>
+          </Grid>
+          <Grid item xs={12} md={4} >
+            {this.state.calandIsVisible && (
+              <CalandBarre
+                onFocus={this.state.onFocus}
+                updateGoInput={this.updateGoInput}
+                updateReturnInput={this.updateReturnInput}
+                selectedGoInput={this.state.selectedGoInput}
+                selectedReturnInput={this.state.selectedReturnInput}
+              />
+            )}   {this.state.cityIsVisible && (
+
+              <BarreRight
+                data={{
+                  updateStartInput: this.updateStartInput,
+                  updateArrivalInput: this.updateArrivalInput,
+                  selectedStartInput: this.state.selectedStartInput,
+                  selectedArrivalInput: this.state.selectedArrivalInput,
+                }}
+              />
+            )}  {this.state.barreRightHomeIsVisible && <BarreRightHome />}
+            {this.state.personIsVisible && (
+              <Person selectedPersonInput={this.state.selectedPersonInput} />
+            )}
+          </Grid>
+
+
+        </Grid>
       </div>
     );
   }
