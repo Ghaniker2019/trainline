@@ -12,7 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Background from "./images/train.jpg";
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
+
 
 class Barre extends React.Component {
   state = {
