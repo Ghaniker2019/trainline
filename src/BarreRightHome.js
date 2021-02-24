@@ -17,7 +17,7 @@ export default class BarreRightHome extends Component {
         style={{
           backgroundColor: "#F8FDFC",
           borderRadius: 4,
-          maxWidth: 400,
+          width: 400,
           marginTop: 60,
           height: 500,
 

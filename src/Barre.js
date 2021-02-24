@@ -125,7 +125,8 @@ class Barre extends React.Component {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Grid container spacing={6} direction="row" justify="center">
+        <Grid container spacing={0} direction="row" justify="center">
+
           <Grid item xs={12} md={4} >
             <div
               style={{
@@ -133,8 +134,7 @@ class Barre extends React.Component {
                 borderRadius: 4,
                 maxWidth: 400,
                 padding: 32,
-                margin: "60px 20px 20px 20px",
-
+                margin: "60px 0 10px 5px",
                 height: 500,
               }}
             >
@@ -546,7 +546,7 @@ class Barre extends React.Component {
 
 
         </Grid>
-      </div>
+      </div >
     );
   }
 }

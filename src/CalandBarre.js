@@ -60,7 +60,6 @@ class CalandBarre extends React.Component {
                   paddingRight: 5,
                   fontSize: "10px",
                   height: "32px",
-                  marginRight: "33px",
                 }}
               >
                 PAS DE RETOUR
