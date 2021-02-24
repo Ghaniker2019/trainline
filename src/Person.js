@@ -3,7 +3,7 @@ import "./person.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignInAlt, faAddressCard } from "@fortawesome/free-solid-svg-icons";
 import "./barreRight.css";
-
+import Hidden from '@material-ui/core/Hidden';
 export default class Person extends Component {
   componentDidMount() {
     console.log(
@@ -13,7 +13,7 @@ export default class Person extends Component {
   }
   render() {
     return (
-      <div
+      <Hidden smDown>  <div
         style={{
 
           backgroundColor: "#FFFFFF",
@@ -179,7 +179,7 @@ export default class Person extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </div> </Hidden>
     );
   }
 }

@@ -125,7 +125,7 @@ class Barre extends React.Component {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Grid container spacing={0} direction="row" justify="center">
+        <Grid container spacing={0} direction="row" justify="center" style={{ minHeight: '100vh' }}>
 
           <Grid item xs={12} md={4} >
             <div
